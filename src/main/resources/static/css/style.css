@@ -1,0 +1,192 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  padding: 0 20px 40px;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* Filter/Search Section */
+.controls {
+  background-color: #333;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.controls input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.controls button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Add Employee Button */
+.add-btn {
+  float: right;
+  margin-bottom: 20px;
+  background-color: #28a745;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+/* Employee List */
+#employee-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.employee-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-2px);
+}
+
+.employee-card p {
+  margin: 5px 0;
+}
+
+.employee-card strong {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.employee-card button {
+  padding: 6px 12px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+
+.employee-card button:hover {
+  background: #e0e0e0;
+}
+
+/* Pagination */
+#pagination-controls {
+  margin-top: 20px;
+}
+
+#pagination-controls button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 4px;
+}
+
+#pagination-controls button:hover {
+  background-color: #bbb;
+}
+
+/* Form Section */
+#form-container {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+#form-container.hidden {
+  display: none;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .employee-card {
+    width: 100%;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .add-btn {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+}

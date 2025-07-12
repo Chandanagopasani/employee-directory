@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="src/main/resources/static/css/style.css" />
+</head>
+<body>
+  <div class="controls">
+    <input type="text" id="search-input" placeholder="Search by name or email">
+    <button>Filter</button>
+  </div>
+
+  <button class="add-btn" onclick="toggleForm()">Add Employee</button>
+
+  <div id="employee-list-container"></div>
+  <div id="pagination-controls"></div>
+  <div id="form-container" class="hidden"></div>
+
+  <template id="form-template">
+    <form id="employee-form">
+      <input type="hidden" id="employee-id" />
+      <label>First Name: <input type="text" id="first-name" required /></label><br />
+      <label>Last Name: <input type="text" id="last-name" required /></label><br />
+      <label>Email: <input type="email" id="email" required /></label><br />
+      <label>Department: <input type="text" id="department" required /></label><br />
+      <label>Role: <input type="text" id="role" required /></label><br />
+      <button type="submit">Save</button>
+      <button type="button" onclick="cancelForm()">Cancel</button>
+    </form>
+  </template>
+
+<script src="../static/js/data.js"></script>
+<script src="../static/js/app.js"></script>
+
+  <footer>
+    © 2025 Employee Directory App. All rights reserved.
+  </footer>
+</body>
+</html>
